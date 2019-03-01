@@ -18,6 +18,7 @@ RUN    apt-get update \
 									     php7.1-xml \
 									     php7.1-curl \
 									     php7.1-mbstring \
+										 php7.1-zip \
 	&& sed -i -e "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g" ${php_conf} \
 	&& sed -i -e "s/upload_max_filesize\s*=\s*2M/upload_max_filesize = 100M/g" ${php_conf} \
 	&& sed -i -e "s/post_max_size\s*=\s*8M/post_max_size = 100M/g" ${php_conf} \

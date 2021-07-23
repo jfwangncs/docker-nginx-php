@@ -10,7 +10,8 @@ RUN apt-get update \
 	&& LC_ALL=en_US.UTF-8 apt-add-repository  ppa:ondrej/php \
 	&& apt-get update \
 	&& ln -s /usr/lib/x86_64-linux-gnu/libssl.so  /usr/lib \
-	&& apt-get install --no-install-recommends --no-install-suggests  -y nginx \								     
+	&& apt-get install --no-install-recommends --no-install-suggests  -y nginx \	
+							         		 php7.4-bcmath \
 										 php7.4-fpm \
 									     supervisor \
 									     php7.4-dev \
